@@ -1,4 +1,4 @@
-<h1> Reading and files in python </h1>
+<h1> Reading files in python </h1>
 
 Open file and return a corresponding file object. If the file cannot be opened, an OSError is raised.
 
