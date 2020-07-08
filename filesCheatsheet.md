@@ -216,6 +216,10 @@ False
 >>> datetime.datetime.fromtimestamp(timestamp)
 datetime.datetime(2020, 7, 8, 17, 13, 0, 920321)
 >>> 
+>>> os.path.abspath('old.txt') #get absolute path
+'/home/nishit/old.txt'
+>>> 
+
 ```
 
 
