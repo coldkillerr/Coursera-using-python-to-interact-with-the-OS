@@ -204,5 +204,18 @@ False
 >>> 
 ```
 
+<h2> Getting File Info </h2>
+
+```python3
+>>> os.path.getsize('old.txt') #filesize
+8
+>>> os.path.getmtime('old.txt') #timestamp when the file was changed since jan 1st 1970
+1594208580.9203212
+>>> import datetime
+>>> timestamp=os.path.getmtime('old.txt')
+>>> datetime.datetime.fromtimestamp(timestamp)
+datetime.datetime(2020, 7, 8, 17, 13, 0, 920321)
+>>> 
+```
 
 
