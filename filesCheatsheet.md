@@ -138,3 +138,71 @@ PRINT('CPU USAGE: ',CPU_USAGE(),'PERCENT')
 ```
 
 using `readlines` we can save the lines in a list and perform the required operations.
+
+<h2> Writing Files </h2>
+
+<h3> Different modes to open a file </h3>
+
+
+| Character 	| Meaning 	|
+|:-:	|:-:	|
+| 'r' 	| open for reading (default) 	|
+| 'w' 	| open for writing, truncating the file first 	|
+| 'x' 	| open for exclusive creation, failing if the file already exists 	|
+| 'a' 	| open for writing, appending to the end of the file if it exists 	|
+| 'b' 	| binary mode 	|
+| 't' 	| text mode (default) 	|
+| '+' 	| open for updating (reading and writing) 	|
+
+The default mode is 'r' (open for reading text, synonym of 'rt'). Modes 'w+' and 'w+b' open and truncate the file. Modes 'r+' and 'r+b' open the file with no truncation.
+
+<h3> Writing to a file </h3>
+
+```python3
+>>> with open('novel.txt','w') as file :
+...     file.write('the beginning')
+... 
+13
+>>> 
+
+```
+
+<h2> Working with files </h2>
+
+<h3> Deleting files in the current working directory </h3>
+
+Using `os.remove()` :
+
+```python3
+>>> import os
+>>> os.remove('novel.txt')
+>>> os.remove('novel.txt')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: 'novel.txt'
+>>> 
+```
+<h3> Renaming Files </h3>
+
+Basic syntax :
+`os.rename('oldname','newname')`
+
+
+```python3
+>>> import os
+>>> os.rename('new.txt','old.txt')
+>>> 
+```
+
+<h3> Checking if Files exist </h3>
+
+```python3
+>>> os.path.exists('old.txt')
+True
+>>> os.path.exists('new.txt')
+False
+>>> 
+```
+
+
+
