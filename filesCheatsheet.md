@@ -66,5 +66,75 @@ if __name__ == '__main__':
 ```python3
 >>> file.close()
 >>> 
-``
+```
 
+<h3> With method </h3>
+
+```python3
+>>> with open('usage_check.py') as file :
+...     print(file.read())
+... 
+
+import psutil
+import shutil
+
+def disk_usage(disk):
+	du=shutil.disk_usage(disk)
+	free_percentage = 100*(du.free / du.total)
+	return free_percentage
+
+def cpu_usage():
+	usage=psutil.cpu_percent(1)
+	return usage
+
+
+if __name__ == '__main__':
+	print('disk usage: ',disk_usage('/'),'percent')
+	print('cpu usage: ',cpu_usage(),'percent')
+
+>>> 
+
+```
+Using `with` keyword you don't need to close the files .
+
+<h2> Iterating Through Files </h2>
+
+<h3> Example : </h3>
+
+```python3
+>>> with open('usage_check.py') as file :
+...     for line in file:
+...             print(line.upper().strip())
+... 
+
+
+IMPORT PSUTIL
+IMPORT SHUTIL
+
+DEF DISK_USAGE(DISK):
+DU=SHUTIL.DISK_USAGE(DISK)
+FREE_PERCENTAGE = 100*(DU.FREE / DU.TOTAL)
+RETURN FREE_PERCENTAGE
+
+DEF CPU_USAGE():
+USAGE=PSUTIL.CPU_PERCENT(1)
+RETURN USAGE
+
+
+IF __NAME__ == '__MAIN__':
+PRINT('DISK USAGE: ',DISK_USAGE('/'),'PERCENT')
+PRINT('CPU USAGE: ',CPU_USAGE(),'PERCENT')
+>>> 
+```
+
+<h3> Saving lines in a list </h3>
+
+```python3
+>>> file=open('usage_check.py')
+>>> lines=file.readlines()
+>>> print(lines)
+['\n', '#!/usr/env/bin/env python3\n', '\n', 'import psutil\n', 'import shutil\n', '\n', 'def disk_usage(disk):\n', '\tdu=shutil.disk_usage(disk)\n', '\tfree_percentage = 100*(du.free / du.total)\n', '\treturn free_percentage\n', '\n', 'def cpu_usage():\n', '\tusage=psutil.cpu_percent(1)\n', '\treturn usage\n', '\n', '\n', "if __name__ == '__main__':\n", "\tprint('disk usage: ',disk_usage('/'),'percent')\n", "\tprint('cpu usage: ',cpu_usage(),'percent')\n"]
+>>> 
+```
+
+using `readlines` we can save the lines in a list and perform the required operations.
