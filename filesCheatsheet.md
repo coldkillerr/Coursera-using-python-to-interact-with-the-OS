@@ -11,6 +11,7 @@ and files nested under their parents.
 <h2> Reading Files </h2>
 
 <h3>Opening files :</h3>
+
 ```python3
 >>> file = open('new.txt')
 ```
@@ -58,4 +59,12 @@ if __name__ == '__main__':
 >>> 
 ```
 
-`file.read()` reads the complete file till the end of the file unlike `readline()` from the current location of the pointer
+`file.read()` reads the complete file till the end of the file unlike `readline()` from the current location of the pointer.
+
+<h3> Closing Files </h3>
+
+```python3
+>>> file.close()
+>>> 
+``
+
