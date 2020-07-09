@@ -19,5 +19,19 @@ Module for manipulating CSV files is : `csv`
 >>> 
 ```
 
+<h3> Iterating through CSV </h3>
+
+```python
+>>> csv_f=csv.reader(open('new_csv.txt'))
+>>> for row in csv_f :
+...     print(row)
+... 
+['Nishit ', ' 1 ', '2']
+['Ramesh ', ' 2 ', '3']
+>>> 
+```
+The elements of rows are interpreted as lists in python for csv files
+
+
 
 
