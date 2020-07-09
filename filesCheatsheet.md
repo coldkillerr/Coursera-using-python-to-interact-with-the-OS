@@ -240,4 +240,16 @@ datetime.datetime(2020, 7, 8, 17, 13, 0, 920321)
 ```
 `os.mkdir()` makes a new directory in the current working directory.
 
+<h3> Changing directory </h3>
+
+```python3
+>>> os.chdir('new_dir')
+>>> os.getcwd()
+'/home/nishit/new_dir'
+>>> 
+```
+`chdir` changes to the cwd to new directory .
+
+
+
 
