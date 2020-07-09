@@ -32,6 +32,9 @@ Module for manipulating CSV files is : `csv`
 ```
 The elements of rows are interpreted as lists in python for csv files
 
+<h2> Generating CSV files </h2>
+
+
 
 
 
