@@ -251,5 +251,22 @@ datetime.datetime(2020, 7, 8, 17, 13, 0, 920321)
 `chdir` changes to the cwd to new directory .
 
 
+<h3> Removing directory </h3>
+
+```python3
+>>> os.rmdir('new_dir')
+```
+`rmdir()` deletes directory only when it is completely empty.
+For this we use `os.listdir()` which lists all the files in a directory
+
+```
+>>> os.listdir('new_dir')
+[]
+>>> 
+
+```
+
+
+
 
 
