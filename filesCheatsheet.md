@@ -259,12 +259,20 @@ datetime.datetime(2020, 7, 8, 17, 13, 0, 920321)
 `rmdir()` deletes directory only when it is completely empty.
 For this we use `os.listdir()` which lists all the files in a directory
 
-```
+```python3
 >>> os.listdir('new_dir')
 []
 >>> 
-
 ```
+<h3> Check if a directory is there </h3>
+
+```python3
+>>> os.path.isdir('new_dir')
+True
+```
+
+
+
 
 
 
