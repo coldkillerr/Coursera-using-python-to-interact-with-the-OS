@@ -34,6 +34,24 @@ The elements of rows are interpreted as lists in python for csv files
 
 <h2> Generating CSV files </h2>
 
+```python3
+>>> lists=[[1,2,3],[4,5,6],[7,8,9]]
+>>> import csv
+>>> with open('hosts.csv','w') as file :
+...     writer=csv.writer(file)
+...     writer.writerows(lists)
+... 
+>>> 
+```
+```shell
+$ cat hosts.csv
+1,2,3
+4,5,6
+7,8,9
+```
+`writer=csv.writer()` is used to create a writer .
+
+`writer.writerows()` is used to write data to file line by line (one line at a time).
 
 
 
