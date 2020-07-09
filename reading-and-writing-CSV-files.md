@@ -7,5 +7,17 @@ as segment of text separated by commas.
 In the Python standard library, you'll find classes and modules for
 working with many of these data formats, including CSV and HTML. 
 
+Module for manipulating CSV files is : `csv`
+
 <h2> Reading CSV Files </h2>
+
+<h3> Creating instance of csv class </h3>
+
+```python3
+>>> f=open('new_csv.txt','w')
+>>> csv_f=csv.reader(f)
+>>> 
+```
+
+
 
