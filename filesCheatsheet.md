@@ -224,7 +224,8 @@ datetime.datetime(2020, 7, 8, 17, 13, 0, 920321)
 
 <h2> Working With directories </h2>
 
-<h3> current Working Directory </h3>
+<h3> Current Working Directory </h3>
+
 ```python3
 >>> os.getcwd()
 '/home/nishit'
