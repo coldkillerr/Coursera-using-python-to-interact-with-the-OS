@@ -51,7 +51,8 @@ $ cat hosts.csv
 ```
 `writer=csv.writer()` is used to create a writer .
 
-`writer.writerows()` is used to write data to file line by line (one line at a time).
+`writer.writerows()` is used to write all data to the file row by row whereas `writer.writerow()` writes on row at a time.
+
 
 
 
