@@ -53,6 +53,24 @@ $ cat hosts.csv
 
 `writer.writerows()` is used to write all data to the file row by row whereas `writer.writerow()` writes on row at a time.
 
+<h2> Reading CSV files as dictionaries </h2>
+
+For this we use `DictReader()`
+
+```python3
+import csv
+with open('csv_dict.csv') as file:
+	reader=csv.DictReader(file)
+	print(type(reader))
+	for row in reader:
+	
+		print('row : {}'.format(str(row)))
+		print('Name :{} ,\n rollNumber {} ,\n Branch {}\n'.format(row['Name'],row['RollNum'],row['Branch']))
+```
+The dictreader creates seperate dictionaries of each row.
+And they can be called by using elements of `first row` as the `keys`
+
+
 
 
 
