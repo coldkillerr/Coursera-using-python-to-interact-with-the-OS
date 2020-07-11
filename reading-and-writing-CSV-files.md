@@ -70,6 +70,26 @@ with open('csv_dict.csv') as file:
 The dictreader creates seperate dictionaries of each row.
 And they can be called by using elements of `first row` as the `keys`
 
+<h2> Writing dictionaries to CSV files </h2>
+
+```python3
+
+>>> import csv
+>>> with open('dept.csv','w') as file :
+...     writer=csv.DictWriter(file,fieldnames=keys)
+...     writer.writeheader()
+...     writer.writerows(users)
+... 
+
+```
+
+The `writeheader()` method will create the first line
+of the CSV based on keys that we passed,
+and the `writerows()` method will turn the list of
+dictionaries into lines in that file. 
+
+
+
 
 
 
