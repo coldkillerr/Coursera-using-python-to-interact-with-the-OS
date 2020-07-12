@@ -75,7 +75,7 @@ It's these characters that allow us to do more
 advanced matching than just
 checking for a literal string. 
 
-For example, a dot matches any character.
+For example, a dot(`.`) matches any character.
 
 ```shell
 nishit  SHITBOT  ~  grep p.th.n /usr/share/dict/words -i
@@ -89,3 +89,42 @@ python's
 pythons
 ```
 
+Other easy examples of
+special characters that we can use in
+a irregular expressions are the caret,
+or circumflex and the dollar sign anchor characters.
+These tell us where in the line
+the regex should match from.
+The circumflex (`^`) indicates the beginning (finding patterns that starts-with)
+and the dollar sign (`$`) indicates the end of the line (finding patterns that ends-with). 
+
+```shell
+nishit  SHITBOT  ~  grep ^fruit /usr/share/dict/words -i
+fruit
+fruit's
+fruitcake
+fruitcake's
+fruitcakes
+fruited
+fruitful
+fruitfully
+fruitfulness
+fruitfulness's
+fruitier
+fruitiest
+fruiting
+fruition
+fruition's
+fruitless
+fruitlessly
+fruitlessness
+fruitlessness's
+fruits
+fruity
+```
+```shell
+nishit  SHITBOT  ~  grep fruit$ /usr/share/dict/words -i
+breadfruit
+fruit
+grapefruit
+```
