@@ -14,6 +14,8 @@ Module used :  `re`
 
 <h2> Using regex with `grep` </h2>
 
+<h3> Grep </h3>
+
 `grep` works by printing
 out any line that matches the query that we pass it.
 So for a simplest query of passing a plain old string,
@@ -54,4 +56,16 @@ telethons
 thong
 thong's
 thongs
+```
+
+`grep` is case sensitive . If we want to match with all cases (upper , lower , mixed ) , you should use `-i`
+
+```shell
+nishit  SHITBOT  ~  grep python /usr/share/dict/words -i
+
+Python
+Python's
+python
+python's
+pythons
 ```
