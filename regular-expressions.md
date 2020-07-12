@@ -69,3 +69,23 @@ python
 python's
 pythons
 ```
+<h3> Reserved Characters </h3>
+
+It's these characters that allow us to do more
+advanced matching than just
+checking for a literal string. 
+
+For example, a dot matches any character.
+
+```shell
+nishit  SHITBOT  ~  grep p.th.n /usr/share/dict/words -i
+Python
+Python's
+diphthong
+diphthong's
+diphthongs
+python
+python's
+pythons
+```
+
