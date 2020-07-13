@@ -145,3 +145,11 @@ The span can be found using `result.span()` method.
 (2, 5)
 >>> 
 ```
+The result is `None` if match is not found
+```python3
+>>> result=re.search(r'aze','plaza')
+>>> print(result)
+None
+>>> 
+```
+
