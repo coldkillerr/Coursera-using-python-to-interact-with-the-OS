@@ -139,3 +139,9 @@ grapefruit
 
 The `re.search()` function returns the span and match if the match is found in the target text.
 The span can be found using `result.span()` method.
+
+```python3
+>>> print(result.span())
+(2, 5)
+>>> 
+```
