@@ -152,4 +152,17 @@ The result is `None` if match is not found
 None
 >>> 
 ```
+<h3> Matching using special characters </h3>
+
+```python3
+>>> print(re.search(r'^a' , 'apple'))
+<re.Match object; span=(0, 1), match='a'>
+>>> print(re.search(r'a$' , 'ba'))
+<re.Match object; span=(1, 2), match='a'>
+>>> print(re.search(r'a.' , 'apple'))
+<re.Match object; span=(0, 2), match='ap'>
+>>> print(re.search(r'a..' , 'apple'))
+<re.Match object; span=(0, 3), match='app'>
+>>> 
+```
 
