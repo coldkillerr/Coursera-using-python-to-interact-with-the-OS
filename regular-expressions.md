@@ -128,3 +128,14 @@ breadfruit
 fruit
 grapefruit
 ```
+<h2> Using search() </h2>
+
+```python3
+>>> result=re.search(r'aza','plaza')
+>>> print(result)
+<re.Match object; span=(2, 5), match='aza'>
+>>> 
+```
+
+The `re.search()` function returns the span and match if the match is found in the target text.
+The span can be found using `result.span()` method.
