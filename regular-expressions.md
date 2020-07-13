@@ -12,9 +12,9 @@ Regular expressions allow us to search for strings matching specific pattern in 
 
 Module used :  `re`
 
-<h2> Using regex with `grep` </h2>
+<h2> Using grep </h2>
 
-<h3> Grep </h3>
+
 
 `grep` works by printing
 out any line that matches the query that we pass it.
