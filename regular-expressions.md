@@ -166,3 +166,10 @@ None
 >>> 
 ```
 
+If we want the match to be insensitive use `re.IGNORECASE` in the `re.search()` function.
+
+```python3
+>>> print(re.search(r'a..l' , 'Apple',re.IGNORECASE))
+<re.Match object; span=(0, 4), match='Appl'>
+>>> 
+```
