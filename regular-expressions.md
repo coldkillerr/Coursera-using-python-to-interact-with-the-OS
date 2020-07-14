@@ -207,10 +207,24 @@ Example :
 <re.Match object; span=(4, 8), match='Tway'>
 >>> re.search(r'[a-zA-Z]way','the Sway is k')
 <re.Match object; span=(4, 8), match='Sway'>
->>> re.search(r'[a-zA-Z]way','the way is k')
+>>> re.search(r'cloud[A-Z0-9a-z]','cloudy')
+<re.Match object; span=(0, 6), match='cloudy'>
+>>> re.search(r'cloud[A-Z0-9a-z]','cloud9')
+<re.Match object; span=(0, 6), match='cloud9'>
 >>> 
 ```
+We can also match any characters that aren't in a group.
+To do that, we use a circumflex (`^`) inside the square brackets.
 
+Example :
+
+```python
+>>> print(re.search(r'cloud[^A-Z]','cloudy cloud9'))
+<re.Match object; span=(0, 6), match='cloudy'>
+>>> print(re.search(r'cloud[^0-9]','cloudy cloud9'))
+<re.Match object; span=(0, 6), match='cloudy'>
+>>> 
+```
 
 
 
