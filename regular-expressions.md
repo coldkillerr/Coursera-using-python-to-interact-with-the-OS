@@ -225,6 +225,20 @@ Example :
 <re.Match object; span=(0, 6), match='cloudy'>
 >>> 
 ```
+The pipe `|` lets us match the text with one out of many options (it acts like an or).
+Example:
+
+```python3
+>>> print(re.search(r'cat|dog','I like cats'))
+<re.Match object; span=(7, 10), match='cat'>
+>>> print(re.search(r'cat|dog','I like dogss'))
+<re.Match object; span=(7, 10), match='dog'>
+>>> print(re.search(r'cat|dog|snake','I like snakes'))
+<re.Match object; span=(7, 12), match='snake'>
+>>> 
+```
+
+
 
 
 
