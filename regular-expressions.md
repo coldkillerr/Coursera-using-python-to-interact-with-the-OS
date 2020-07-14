@@ -180,16 +180,15 @@ Character classes are written inside square brackets and
 let us list the characters we want to match inside of those brackets. 
 
 Example :
-
 ```python3
 >>> re.search(r'[aA]way','the away is k')
 <re.Match object; span=(4, 8), match='away'>
 >>> 
 ```
+
 Inside the square brackets, we can also define a range of characters using a dash.
 
 Example :
-
 ```python3
 >>> re.search(r'[a-z]way','the sway is k')
 <re.Match object; span=(4, 8), match='sway'>
