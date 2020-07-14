@@ -252,6 +252,17 @@ But if we use the `findall()` function it finds all matches from a text .
 ['cat', 'dog', 'snake']
 ```
 
+<h3> Repetition Qualifiers </h3>
 
+Repetition qualifiers are used to match a character multiple times . For this we use repeated matches. A dot `.` followed by a `*` means that it matches any character repeated as many times as possible including zero. 
+
+Example :
+
+```python3
+>>> print(re.search(r'py.*n','I like python'))
+<re.Match object; span=(7, 13), match='python'>
+>>> print(re.search(r'py.*n','I like pythonian'))
+<re.Match object; span=(7, 16), match='pythonian'>
+```
 
 
