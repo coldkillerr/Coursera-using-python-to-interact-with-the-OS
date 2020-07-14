@@ -173,3 +173,44 @@ If we want the match to be insensitive use `re.IGNORECASE` in the `re.search()` 
 <re.Match object; span=(0, 4), match='Appl'>
 >>> 
 ```
+
+<h3> Character Classes </h3>
+
+Character classes are written inside square brackets and
+let us list the characters we want to match inside of those brackets. 
+
+Example :
+
+```python3
+>>> re.search(r'[aA]way','the away is k')
+<re.Match object; span=(4, 8), match='away'>
+>>> 
+```
+Inside the square brackets, we can also define a range of characters using a dash.
+
+Example :
+
+```python3
+>>> re.search(r'[a-z]way','the sway is k')
+<re.Match object; span=(4, 8), match='sway'>
+>>> re.search(r'[a-z]way','the tway is k')
+<re.Match object; span=(4, 8), match='tway'>
+>>> re.search(r'[a-u]way','the tway is k')
+<re.Match object; span=(4, 8), match='tway'>
+```
+We can also search for multiple character classes at a time.
+
+Example :
+```python3
+>>> re.search(r'[a-zA-Z]way','the tway is k')
+<re.Match object; span=(4, 8), match='tway'>
+>>> re.search(r'[a-zA-Z]way','the Tway is k')
+<re.Match object; span=(4, 8), match='Tway'>
+>>> re.search(r'[a-zA-Z]way','the Sway is k')
+<re.Match object; span=(4, 8), match='Sway'>
+>>> re.search(r'[a-zA-Z]way','the way is k')
+>>> 
+```
+
+
+
