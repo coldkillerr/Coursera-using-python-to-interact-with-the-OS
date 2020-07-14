@@ -237,7 +237,15 @@ Example:
 <re.Match object; span=(7, 12), match='snake'>
 >>> 
 ```
+The search function finds only the first instance of a match . 
 
+```python3
+>>> print(re.search(r'cat|dog|snake','I like cats, dogs, and snakes'))
+<re.Match object; span=(7, 10), match='cat'>
+>>> 
+```
+
+But if we use the `findall()` function it finds all matches from a text .
 
 
 
