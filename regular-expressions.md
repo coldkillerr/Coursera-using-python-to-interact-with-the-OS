@@ -247,6 +247,11 @@ The search function finds only the first instance of a match .
 
 But if we use the `findall()` function it finds all matches from a text .
 
+```python3
+>>> print(re.findall(r'cat|dog|snake','I like cats, dogs, and snakes'))
+['cat', 'dog', 'snake']
+```
+
 
 
 
