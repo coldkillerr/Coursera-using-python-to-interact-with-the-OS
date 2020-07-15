@@ -308,3 +308,13 @@ one occurrence of the character before it
 <re.Match object; span=(7, 11), match='each'>
 >>> 
 ```
+<h3> Matching Special Characaters </h3>
+
+We can match special characters using backslash `\`
+Example :
+
+```python3
+>>> print(re.search(r'\.com','github.com'))
+<re.Match object; span=(6, 10), match='.com'>
+>>> 
+```
