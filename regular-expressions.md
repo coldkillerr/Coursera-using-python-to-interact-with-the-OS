@@ -264,5 +264,7 @@ Example :
 >>> print(re.search(r'py.*n','I like pythonian'))
 <re.Match object; span=(7, 16), match='pythonian'>
 ```
-
+The Star takes as many characters as possible.
+In programming terms, we
+say that this behavior is greedy. 
 
