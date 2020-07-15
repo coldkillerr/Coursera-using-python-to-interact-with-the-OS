@@ -329,3 +329,29 @@ None
 <b>Note : When we see a pattern that includes a backslash,
 it could be escaping a special regex character
 or a special string character. </b> 
+
+Using raw strings, like we've been doing,
+helps avoid some of these possible confusion because
+the special characters won't be
+interpreted when generating the string.
+They will only be interpreted
+when parsing the regular expression.
+
+Python also uses the backslash `\` for
+a few special sequences that we can use
+to represent predefined sets of characters.
+For example, `\w` matches
+any alphanumeric character including
+letters, numbers, and underscores. 
+
+```python3
+>>> print(re.search(r'\w.*','An example'))
+<re.Match object; span=(0, 10), match='An example'>
+>>> print(re.search(r'\w.*','Another_example'))
+<re.Match object; span=(0, 15), match='Another_example'>
+>>> print(re.search(r'\w.','Another_example'))
+<re.Match object; span=(0, 2), match='An'>
+>>> print(re.search(r'\w','Another_example'))
+<re.Match object; span=(0, 1), match='A'>
+>>> 
+```
