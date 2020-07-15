@@ -378,3 +378,23 @@ None
 >>> 
 ```
 In the above example I to make a regex for a valid variable name.
+
+<h3> How to escape greedy behaviour </h3>
+
+```python3
+>>> s = '<html><head><title>Title</title>'
+>>> len(s)
+32
+>>> print(re.match('<.*>', s).span())
+(0, 32)
+>>> print(re.match('<.*>', s).group())
+<html><head><title>Title</title>
+```
+
+The RE matches the '<' in '<html>', and the .* consumes the rest of the string. In this case, the solution is to use the non-greedy qualifiers *?, +?, ??, or {m,n}?, which match as little text as possible. 
+ 
+```python3
+>>> print(re.match('<.*?>', s).group())
+<html>
+```
+
