@@ -281,3 +281,30 @@ For eg.
 
 ```
 <b>Note : As we see in the above example the pattern matches for any number of times even zero.</b>
+
+The plus `+` character matches
+one or more occurrences
+of the character that comes before it.
+
+Example :
+
+```python3
+>>> print(re.search(r'o+n+','I like pythoooonian'))
+<re.Match object; span=(11, 16), match='oooon'>
+>>> print(re.search(r'o+n+','oooonnnnnoooooonnnn'))
+<re.Match object; span=(0, 9), match='oooonnnnn'>
+>>> print(re.findall(r'o+n+','oooonnnnnoooooonnnn'))
+['oooonnnnn', 'oooooonnnn']
+>>> 
+```
+
+The question mark `?` qualifier matches for either zero or
+one occurrence of the character before it
+
+```python3
+ >>> print(re.search(r'p?each','I like ppeaches'))
+<re.Match object; span=(8, 13), match='peach'>
+>>> print(re.search(r'p?each','I like each'))
+<re.Match object; span=(7, 11), match='each'>
+>>> 
+```
