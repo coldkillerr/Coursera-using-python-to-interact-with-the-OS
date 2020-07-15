@@ -268,3 +268,8 @@ The Star takes as many characters as possible.
 In programming terms, we
 say that this behavior is greedy. 
 
+If we wanted the pattern to match a specific class we should've used a character class instead.
+
+For eg.
+
+
