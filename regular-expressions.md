@@ -377,7 +377,7 @@ None
 None
 >>> 
 ```
-In the above example I to make a regex for a valid variable name.
+In the above example I tried to make a regex for a valid variable name.
 
 <h3> How to escape greedy behaviour </h3>
 
