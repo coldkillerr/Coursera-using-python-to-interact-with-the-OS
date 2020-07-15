@@ -326,6 +326,6 @@ None
 >>> 
 
 ```
-When we see a pattern that includes a backslash,
+<b>Note : When we see a pattern that includes a backslash,
 it could be escaping a special regex character
-or a special string character. 
+or a special string character. </b> 
