@@ -355,3 +355,7 @@ letters, numbers, and underscores.
 <re.Match object; span=(0, 1), match='A'>
 >>> 
 ```
+There's also `\d` for `matching digits`,
+`\s` for `matching whitespace characters` like space,
+tab or new line,
+`\b` for `word boundaries` and a few others. 
