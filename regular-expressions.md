@@ -399,3 +399,25 @@ The RE matches the '<' in '<html>', and the .* consumes the rest of the string. 
 ```
 <h1> Advanced Regular Expressions </h1>
 
+<h2> Capturing Groups </h2>
+
+Capturing groups are portions of the pattern that are enclosed in parentheses.Capturing groups are portions of the pattern that are enclosed in parentheses.
+
+Example :
+
+```python
+>>> result=(re.search(r'^(\w*), (\w*)$','Jain, Nishit'))
+>>> print(result.group())
+Jain, Nishit
+>>> print(result[0])
+Jain, Nishit
+>>> print(result[1])
+Jain
+>>> print(result[2])
+Nishit
+>>> print('{} {}'.format(result[2],result[1])
+... )
+Nishit Jain
+>>> 
+```
+
