@@ -272,4 +272,8 @@ If we wanted the pattern to match a specific class we should've used a character
 
 For eg.
 
-
+```python
+>>> print(re.search(r'py[a-z]*n','I like pythonian'))
+<re.Match object; span=(7, 16), match='pythonian'>
+>>> 
+```
