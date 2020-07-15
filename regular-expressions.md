@@ -316,5 +316,16 @@ Example :
 ```python3
 >>> print(re.search(r'\.com','github.com'))
 <re.Match object; span=(6, 10), match='.com'>
+<re.Match object; span=(6, 10), match='.com'>
+>>> print(re.search(r'\*com','A star*com'))
+<re.Match object; span=(6, 10), match='*com'>
+>>> print(re.search(r'\?com','A question mark ?*com'))
+None
+>>> print(re.search(r'\?com','A question mark ?com'))
+<re.Match object; span=(16, 20), match='?com'>
 >>> 
+
 ```
+When we see a pattern that includes a backslash,
+it could be escaping a special regex character
+or a special string character. 
