@@ -359,3 +359,22 @@ There's also `\d` for `matching digits`,
 `\s` for `matching whitespace characters` like space,
 tab or new line,
 `\b` for `word boundaries` and a few others. 
+
+<h3> Use of regex irl </h3>
+
+```python
+>>> pattern=r"^[A-Za-z_].*$"
+>>> print(re.search(pattern,'this_is_a_valid_variable_name'))
+<re.Match object; span=(0, 29), match='this_is_a_valid_variable_name'>
+>>> print(re.search(pattern,'9this_is_a_valid_variable_name'))
+None
+>>> print(re.search(pattern,'_this_is_a_valid_variable_name'))
+<re.Match object; span=(0, 30), match='_this_is_a_valid_variable_name'>
+>>> print(re.search(pattern,'_this is_a_valid_variable_name'))
+<re.Match object; span=(0, 30), match='_this is_a_valid_variable_name'>
+>>> pattern=r"^[A-Za-z_][A-Za-z0-9_]*$"
+>>> print(re.search(pattern,'_this is_a_valid_variable_name'))
+None
+>>> 
+```
+In the above example I to make a regex for a valid variable name.
