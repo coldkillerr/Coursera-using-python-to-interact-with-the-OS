@@ -460,8 +460,29 @@ As we see in the above example the characters in the regex were taken in their l
 
 <h3> The sub() function </h3>
 
+We use sub() function to use regular expressions to replace regular expressions.
+
 ```python3
 >>> print(re.sub(r'[\w./%+-]+@[\w.-]+','[REDACTED]','Recieved an email from mnhatter69@example.com'))
 Recieved an email from [REDACTED]
 ```
 In the above example I replaced the email with '[REDACTED]' using the `sub()` function which acts like `replace()` functions for strings.
+
+```python3
+>>> print(re.sub(r'([\w .-]*), ([\w.-]*)',r'\2 \1','Jain, Nishit'))
+Nishit Jain
+```
+
+In the above example we replaced group[1] which we marked using `\1` and vice versa.
+We use backslash two to
+indicate the second captured group
+followed by a space and
+backslash one to indicate the first captured group.
+When referring to captured groups,
+a backslash followed by
+a number indicates the corresponding captured group.
+This is a general notation for regular expressions,
+and it's used by many tools that
+support regexes, not just Python.
+We can also use them to match patterns that repeat
+themselves which use capturing groups as back references. 
