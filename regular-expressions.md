@@ -458,3 +458,10 @@ For example :
 ```
 As we see in the above example the characters in the regex were taken in their literal sense and not as special or wildcard characters (without the backslash).
 
+<h3> The sub() function </h3>
+
+```python3
+>>> print(re.sub(r'[\w./%+-]+@[\w.-]+','[REDACTED]','Recieved an email from mnhatter69@example.com'))
+Recieved an email from [REDACTED]
+```
+In the above example I replaced the email with '[REDACTED]' using the `sub()` function which acts like `replace()` functions for strings.
