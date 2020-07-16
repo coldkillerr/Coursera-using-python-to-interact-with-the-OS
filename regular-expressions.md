@@ -420,4 +420,22 @@ Nishit
 Nishit Jain
 >>> 
 ```
+<h2> Numeric Repetition Qualifiers </h2>
 
+Python also offers numeric repetition qualifiers.
+These are written between curly brackets and
+can be one or two numbers specifying a range. 
+
+Example :
+
+```python
+>>> print(re.search(r'[a-zA-Z]{3,6}','A GhOsT'))
+<re.Match object; span=(2, 7), match='GhOsT'>
+>>> print(re.search(r'[a-zA-Z]{3,6}','A GhOsTs'))
+<re.Match object; span=(2, 8), match='GhOsTs'>
+>>> print(re.search(r'[a-zA-Z]{3,6}','A big GhOsTs'))
+<re.Match object; span=(2, 5), match='big'>
+>>> 
+
+```
+In the above example the match is for a string of length in the range 3 to 6
