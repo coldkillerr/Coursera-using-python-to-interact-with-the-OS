@@ -438,4 +438,23 @@ Example :
 >>> 
 
 ```
-In the above example the match is for a string of length in the range 3 to 6
+In the above example the match is for a string of length in the range 3 to 6.
+
+<h2> Splitting and Replacing </h2>
+
+<h3> The split() function </h3>
+
+It works similarly to
+the split function that we used before with strings.
+But instead of taking a string as a separator,
+you can take any regular expression as a separator.
+
+For example :
+
+```python3
+>>> print(re.split(r'[.!?]','A sentence. Another Sentence? Third Sentence!'))
+['A sentence', ' Another Sentence', ' Third Sentence', '']
+>>> 
+```
+As we see in the above example the characters in the regex were taken in their literal sense and not as special or wildcard characters (without the backslash).
+
