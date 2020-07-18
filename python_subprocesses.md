@@ -16,3 +16,31 @@ The `run` function returns an object of the `CompletedProcess` type.
 This object includes information related to the execution of the command.
 From the information that got printed we can see that the `returncode` of
 the command was `0`.
+
+To run the external command a secondary environment is created for
+the child process or subprocess where the command is executed.
+While the parent process, which is our script,
+is waiting on the subprocess to finish, it's blocked,
+which means that the parent can't do any work until the child finishes.
+And I bet a lot of parents out there saying, I know that's right.
+After the external command completes its work, the child process exits and
+the flow of control returns to the parent.
+Then the script can continue with normal execution.
+
+```python3
+>>> subprocess.run(["sleep","10"])
+CompletedProcess(args=['sleep', '10'], returncode=0)
+>>> 
+```
+
+The run function receives a list that starts with the name of the command that
+we want to call, followed by any other parameters that we want to pass to that command.
+So any elements following the program name are the command-line arguments for it. 
+
+```python3
+>>> result=subprocess.run(['ls','no_such_file'])
+ls: cannot access 'no_such_file': No such file or directory
+>>> print(result.returncode)
+2
+>>> 
+
