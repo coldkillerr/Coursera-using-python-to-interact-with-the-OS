@@ -96,3 +96,16 @@ FRUIT : pineapple
 These are parameters that are
 passed to a program when it started. 
 We can access them using `argv` list in the `sys` module.
+
+```shell
+$ cat argov.py 
+import sys
+print(sys.argv)
+
+
+$ python3 argov.py 
+['argov.py']
+
+$ python3 argov.py command line argument
+['argov.py', 'command', 'line', 'argument']
+```
