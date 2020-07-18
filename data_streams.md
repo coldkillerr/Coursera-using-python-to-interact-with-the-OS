@@ -49,7 +49,7 @@ that environment which are called
 environment variables are another source
 of information that we can use in our scripts.
 
- * The `PATH` Variable
+ <h3>The PATH Variable</h3>
  
 ```shell
 $ echo $PATH
@@ -61,6 +61,8 @@ and we call them while specifying a directory.
 All those directories listed there are
 where the shell will look for programs.  
 
+<h3> Environment Variables in Python </h3>
+ 
 To access environment variables,
 we use the `Environ` dictionary provided by the `OS` module. 
 
@@ -89,3 +91,8 @@ $ export FRUIT=pineapple
 FRUIT : pineapple
 >>> 
 ```
+<h3> Command-Line Arguments </h3>
+
+These are parameters that are
+passed to a program when it started. 
+We can access them using `argv` list in the `sys` module.
