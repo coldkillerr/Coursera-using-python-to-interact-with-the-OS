@@ -49,3 +49,11 @@ that environment which are called
 environment variables are another source
 of information that we can use in our scripts.
 
+ * The `PATH` Variable
+ 
+```shell
+$ echo $PATH
+/home/nishit/.local/bin:/home/nishit/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+```
+ 
+
