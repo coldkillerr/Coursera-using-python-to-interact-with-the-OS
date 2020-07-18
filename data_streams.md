@@ -61,3 +61,15 @@ and we call them while specifying a directory.
 All those directories listed there are
 where the shell will look for programs.  
 
+To access environment variables,
+we use the `Environ` dictionary provided by the `OS` module. 
+
+```python3
+>>> print("HOME : {}".format(os.environ.get("HOME","")))
+HOME : /home/nishit
+>>> print("SHELL : {}".format(os.environ.get("SHELL","")))
+SHELL : /bin/bash
+>>> print("USER : {}".format(os.environ.get("USER","")))
+USER : nishit
+>>> 
+```
