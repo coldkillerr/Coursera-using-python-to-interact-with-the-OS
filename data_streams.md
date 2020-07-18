@@ -117,7 +117,7 @@ In all Unix-like operating systems,
 the exit status of the process is zero when
 the process succeeds and different than zero if it fails.
 
-We can access the exit code of a process using `$?` on the command line.
+We can access the exit code of a process using `?` on the command line.
 
 ```sh
 $ echo $?
@@ -138,4 +138,5 @@ $ echo $?
 69
 
 ```
+Note : The `?` holds the exit status of only the latest process.If we don't provide any exit status in the code it is set by default to `0`.
 
