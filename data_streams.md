@@ -74,3 +74,18 @@ SHELL : /bin/bash
 USER : nishit
 >>> 
 ```
+
+To define a variable a way that
+our script we'll be able to see it,
+we need to run this in our command-line. 
+
+```sh
+$ export FRUIT=pineapple
+```
+
+```python3
+>>> import os
+>>> print("FRUIT : {}".format(os.environ.get("FRUIT","")))
+FRUIT : pineapple
+>>> 
+```
