@@ -40,5 +40,12 @@ then that error message was probably printed using standard error stream.
 
 I/O streams are ways for programs to get and receive information. 
 
+<h2> Environment Variables </h2>
 
+Python programs get executed
+inside a shell command-line environment.
+The variable set in
+that environment which are called
+environment variables are another source
+of information that we can use in our scripts.
 
