@@ -109,3 +109,33 @@ $ python3 argov.py
 $ python3 argov.py command line argument
 ['argov.py', 'command', 'line', 'argument']
 ```
+<h3> Exit Status </h3>
+
+The exit status is a value
+returned by a program to the shell.
+In all Unix-like operating systems,
+the exit status of the process is zero when
+the process succeeds and different than zero if it fails.
+
+We can access the exit code of a process using `$?` on the command line.
+
+```sh
+$ echo $?
+0
+```
+We can assign the exit code to a  python script using `sys.exit(exit_code)`
+
+```shell
+$ cat exitc.py
+import sys
+print('Exit code = {}'.format(69))
+sys.exit(69)
+
+$ python3 exitc.py 
+Exit code = 69
+
+$ echo $?
+69
+
+```
+
