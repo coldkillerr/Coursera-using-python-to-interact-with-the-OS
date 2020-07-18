@@ -65,6 +65,7 @@ To access environment variables,
 we use the `Environ` dictionary provided by the `OS` module. 
 
 ```python3
+>>> import os
 >>> print("HOME : {}".format(os.environ.get("HOME","")))
 HOME : /home/nishit
 >>> print("SHELL : {}".format(os.environ.get("SHELL","")))
