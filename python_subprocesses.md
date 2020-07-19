@@ -57,5 +57,17 @@ b'8.8.8.8.in-addr.arpa domain name pointer dns.google.\n'
 ```
 The output stored as standard output can be obtained using `stdout`.
 The `b` at the start specifies that its not a string , its actually an array of bytes.
+To convert it to string use decode .
+
+```python3
+>>> print(result.stdout.decode())
+8.8.8.8.in-addr.arpa domain name pointer dns.google.
+
+>>> print(result.stdout.decode().split())
+['8.8.8.8.in-addr.arpa', 'domain', 'name', 'pointer', 'dns.google.']
+>>> 
+```
+We used `split()` so that we can use whatever part of the string we want to use.
+
 
 
