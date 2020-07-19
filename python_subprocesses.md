@@ -69,5 +69,18 @@ To convert it to string use decode .
 ```
 We used `split()` so that we can use whatever part of the string we want to use.
 
+If the command fails the error is stored in `stderr` attribute.
+
+```python3
+>>> result=subprocess.run(["rm","does_not_exist"],capture_output=True)
+>>> print(result.returncode)
+1
+>>> print(result.stdout)
+b''
+>>> print(result.stderr)
+b"rm: cannot remove 'does_not_exist': No such file or directory\n"
+>>> 
+```
+As `does_not_exist` does not exist , the returncode of the statement is `1` and hence no output is shown on `stdout` and the error is saved in `stderr`.
 
 
