@@ -56,6 +56,6 @@ b'8.8.8.8.in-addr.arpa domain name pointer dns.google.\n'
 >>> 
 ```
 The output stored as standard output can be obtained using `stdout`.
-The       
+The `b` at the start specifies that its not a string , its actually an array of bytes.
 
 
