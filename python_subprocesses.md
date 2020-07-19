@@ -43,4 +43,19 @@ ls: cannot access 'no_such_file': No such file or directory
 >>> print(result.returncode)
 2
 >>> 
+```
+We can catch the output of the run command using the `capture_output` function.
+(This is available in python3.7 and ahead.)
+
+```python3
+>>> result=subprocess.run(["host","8.8.8.8"],capture_output=True)
+>>> print(result)
+CompletedProcess(args=['host', '8.8.8.8'], returncode=0, stdout=b'8.8.8.8.in-addr.arpa domain name pointer dns.google.\n', stderr=b'')
+>>> print(result.stdout)
+b'8.8.8.8.in-addr.arpa domain name pointer dns.google.\n'
+>>> 
+```
+The output stored as standard output can be obtained using `stdout`.
+The       
+
 
