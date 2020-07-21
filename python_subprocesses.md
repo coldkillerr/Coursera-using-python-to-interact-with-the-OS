@@ -83,4 +83,22 @@ b"rm: cannot remove 'does_not_exist': No such file or directory\n"
 ```
 As `does_not_exist` does not exist , the returncode of the statement is `1` and hence no output is shown on `stdout` and the error is saved in `stderr`.
 
+If we're automating a one-off, well-defined task,
+we're developing a solution
+quickly is the biggest requirement,
+then using system commands and
+subprocesses can help a lot.
+But if we're doing something
+more complex or long-running,
+it's usually a good idea to use the bait
+in or external modules that Python provides.
+So before deciding to use a sub processes,
+it's a good idea to check
+the standard library or
+pypi repository to see if we can do
+the task with native Python and to check if
+someone has already created
+the automation that we wanted to write.
+
+
 
