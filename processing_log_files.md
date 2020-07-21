@@ -9,3 +9,6 @@ terminal are usually saved in log files.
 Log files contain a lot of useful information,
 particularly when you're trying to debug
 a tricky problem that's happening on a computer. 
+
+<h2> Filtering Log files with Regular Expressions </h2?
+  
