@@ -130,3 +130,25 @@ def test_empty(self):
 | `assertNotIn(a, b)`         | a not in b           | 3.1    |
 | `assertIsInstance(a, b)`    | isinstance(a, b)     | 3.2    |
 | `assertNotIsInstance(a, b)` | not isinstance(a, b) | 3.2    |
+
+
+<h2> Black Box VS White Box </h2>
+
+`White-box testing` also sometimes
+called `clear-box` or `transparent
+testing` relies on the test creators knowledge of
+the software being tested to construct the test cases.
+With a white-box test,
+the test creator knows how the code
+works and can write test cases that
+use the understanding to make sure
+that everything is performing the way it's expected to. 
+
+`Black-box tests` are written with
+an awareness of what the program is supposed to do,
+its requirements or specifications,
+but not how it does it. 
+In black-box testing,
+the software being tested is treated like an opaque box.
+In other words, the tester doesn't know
+the internals of how the software works.
