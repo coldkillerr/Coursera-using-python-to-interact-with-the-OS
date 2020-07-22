@@ -188,5 +188,13 @@ the buggy behavior, then fix the bug so that a test passes.
 Regression tests are useful part of a test suite because they ensure
 that the same mistake doesn't happen twice.
 
+`Smoke test` sometimes called build verification test,
+get their name from a concept that comes from testing hardware equipment.
+When writing software smoke test serve as
+a kind of sanity check to find major bugs in a program.
+These tests are usually run before more refined testing takes place.
+Since if the software fails the smoke test you can be pretty
+sure none of the other tests will pass either
+
 
 
