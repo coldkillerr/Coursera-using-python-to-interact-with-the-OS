@@ -35,6 +35,7 @@ we let the computer do this for us.
 Automatic testing means we'll write code to do the test. 
 
 <h2> Unit Tests </h2>
+
 Unit tests are used to verify that
 small isolated parts of a program are correct.
 Unit tests are generally written
