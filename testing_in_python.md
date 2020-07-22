@@ -105,3 +105,8 @@ programs will typically work with.
 Edge cases usually need special handling in scripts in order for
 the code to continue to behave correctly.
 
+```python3
+def test_empty(self):
+	testcase = ''
+	expected = False
+```
