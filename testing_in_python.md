@@ -51,3 +51,48 @@ in question and doesn't result from some external factor
 like the network being down
 or a database server being unresponsive.
 
+<h2> Writing Automatic Tests in Python </h2>
+
+For this we create a test code in the same directory as the `code_to_be_tested.py` as `code_to_be_tested_test.py`.
+Python provides us with a module called `unittest` for testing purposes.
+The unittest module provides a `TestCase` class with a bunch of testing methods
+ready to use. 
+
+<h3>Code : </h3>
+
+```python3
+
+#!/usr/bin/env python3
+import re
+def check_web_address(text):
+  pattern = r"[a-zA-Z]*\.[a-zA-Z]*$"
+  result = re.search(pattern, text)
+  return result != None
+
+if __name__ == '__main__':
+
+	print(check_web_address("gmail.com")) # True
+	print(check_web_address("www@google")) # False
+	print(check_web_address("www.Coursera.org")) # True
+	print(check_web_address("web-address.com/homepage")) # False
+	print(check_web_address("My_Favorite-Blog.US")) # True
+
+```
+
+<h3> Test Code : </h3>
+
+```python3
+#!/usr/bin/env python3
+from reg import check_web_address
+import unittest
+
+class TestReg(unittest.TestCase):
+	def test_basic(self):
+		testcase='www.coursera.org'
+		expected= True
+		self.assertEqual(check_web_address(testcase),expected)
+
+
+unittest.main()
+
+```
