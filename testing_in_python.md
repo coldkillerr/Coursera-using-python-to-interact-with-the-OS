@@ -165,3 +165,18 @@ the test cases are made with
 a knowledge of how software works.
 They are `white-box` tests.
 
+<h2> Other Test Types </h2>
+
+`Integration tests` take the individual modules of code that unit test
+verify then combine them into a group to test.
+Depending on what our program does, and
+how it interacts with the rest of the systems involved,
+we might need to create a separate test environment for our test. 
+
+
+While unit tests shouldn't cross boundaries to do things like
+make a network request or integrate with an API or database,
+the goal of an integration test is to verify these kinds of interactions and
+make sure the whole system works how you expect it to.
+
+
