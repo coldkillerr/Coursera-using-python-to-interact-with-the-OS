@@ -179,4 +179,14 @@ make a network request or integrate with an API or database,
 the goal of an integration test is to verify these kinds of interactions and
 make sure the whole system works how you expect it to.
 
+A variant of unit tests are `regression tests`.
+They're usually written as part of a debugging and troubleshooting process
+to verify that an issue or error has been fixed once it's been identified.
+Say our script has a bug and we're trying to fix it.
+A good approach to doing this would be the first right to test fails by triggering
+the buggy behavior, then fix the bug so that a test passes.
+Regression tests are useful part of a test suite because they ensure
+that the same mistake doesn't happen twice.
+
+
 
