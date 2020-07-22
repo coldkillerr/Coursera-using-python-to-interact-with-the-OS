@@ -96,3 +96,11 @@ class TestReg(unittest.TestCase):
 unittest.main()
 
 ```
+
+
+<b>Edge cases</b> are inputs to our code that produce unexpected results, and
+are found at the extreme ends of the ranges of input we imagine our
+programs will typically work with.
+Edge cases usually need special handling in scripts in order for
+the code to continue to behave correctly.
+
