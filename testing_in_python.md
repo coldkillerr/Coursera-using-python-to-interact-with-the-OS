@@ -152,3 +152,16 @@ In black-box testing,
 the software being tested is treated like an opaque box.
 In other words, the tester doesn't know
 the internals of how the software works.
+
+
+If the unit tests are `created before any code` is
+written based on specifications
+of what the code is supposed to do,
+they can be considered `black-box` unit test.
+
+If unit tests are `run alongside`
+or after the code has been developed,
+the test cases are made with
+a knowledge of how software works.
+They are `white-box` tests.
+
