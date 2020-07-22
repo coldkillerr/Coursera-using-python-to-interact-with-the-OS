@@ -3,8 +3,7 @@
 <b>Software testing</b> is a process of evaluating
 computer code to determine
 whether or not it does what you expect it to do.
-
-Tests cann help make good code great.
+Tests can help make good code great.
 
 <h2> Manual And Automated Testing </h2>
 
@@ -34,3 +33,10 @@ different parameters and checking
 the results are what we expected them to be,
 we let the computer do this for us.
 Automatic testing means we'll write code to do the test. 
+
+<h2> Unit Tests </h2>
+Unit tests are used to verify that
+small isolated parts of a program are correct.
+Unit tests are generally written
+alongside the code to test the behavior
+of individual pieces or units like functions or methods. 
