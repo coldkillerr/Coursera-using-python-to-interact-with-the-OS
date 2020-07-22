@@ -37,7 +37,17 @@ Automatic testing means we'll write code to do the test.
 <h2> Unit Tests </h2>
 
 Unit tests are used to verify that
-small isolated parts of a program are correct.
+`small isolated parts` of a program are correct.
 Unit tests are generally written
 alongside the code to test the behavior
 of individual pieces or units like functions or methods. 
+
+An important characteristic of a unit test is `isolation`.
+Unit test should only test the unit of code they target,
+the function or method that's being tested.
+This ensures that any success or
+failure of the test is caused by the behavior of the unit
+in question and doesn't result from some external factor
+like the network being down
+or a database server being unresponsive.
+
