@@ -194,7 +194,17 @@ When writing software smoke test serve as
 a kind of sanity check to find major bugs in a program.
 These tests are usually run before more refined testing takes place.
 Since if the software fails the smoke test you can be pretty
-sure none of the other tests will pass either
+sure none of the other tests will pass either.
 
+
+`Load tests` verify that the system behaves well when it's under significant load.
+To actually perform these tests will need to generate traffic to our application
+simulating typical usage of the service.
+These tests can be super-helpful when deploying new versions of our applications
+to verify that performance does not degrade. 
+
+
+Taking together a group of tests of one or
+many kinds is commonly referred to as a `test suite`. 
 
 
