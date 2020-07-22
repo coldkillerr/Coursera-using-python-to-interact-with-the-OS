@@ -58,7 +58,7 @@ Python provides us with a module called `unittest` for testing purposes.
 The unittest module provides a `TestCase` class with a bunch of testing methods
 ready to use. 
 
-<h3>Code : </h3>
+<h4>Code : </h4>
 
 ```python3
 
@@ -79,7 +79,7 @@ if __name__ == '__main__':
 
 ```
 
-<h3> Test Code : </h3>
+<h4> Test Code : </h4>
 
 ```python3
 #!/usr/bin/env python3
@@ -98,7 +98,7 @@ unittest.main()
 ```
 
 
-<b>Edge cases</b> are inputs to our code that produce unexpected results, and
+Edge cases are inputs to our code that produce unexpected results, and
 are found at the extreme ends of the ranges of input we imagine our
 programs will typically work with.
 Edge cases usually need special handling in scripts in order for
