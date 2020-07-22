@@ -97,6 +97,7 @@ unittest.main()
 
 ```
 
+<h3> Edge Cases </h3>
 
 Edge cases are inputs to our code that produce unexpected results, and
 are found at the extreme ends of the ranges of input we imagine our
