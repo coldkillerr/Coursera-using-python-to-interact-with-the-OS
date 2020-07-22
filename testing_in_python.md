@@ -109,4 +109,6 @@ the code to continue to behave correctly.
 def test_empty(self):
 	testcase = ''
 	expected = False
+	self.assertEqual(check_web_address(testcase),expected)
+
 ```
