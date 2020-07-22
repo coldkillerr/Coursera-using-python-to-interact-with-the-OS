@@ -1,8 +1,6 @@
 <h1> Testing In Python </h1>
 
-<h3> Software Testing </h3>
-
-Software testing is a process of evaluating
+<b>Software testing</b> is a process of evaluating
 computer code to determine
 whether or not it does what you expect it to do.
 
