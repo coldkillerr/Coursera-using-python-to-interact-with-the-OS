@@ -34,3 +34,41 @@ Traceback (most recent call last):
     raise ValueError('Text is invalid')
 ValueError: Text is invalid
 ```
+
+<h2> Assertion </h2>
+
+The `assert` keyword tries to verify that
+a conditional expression is true,
+and if it's false it raises
+an assertion error with the indicated message.
+
+```python3
+def validate_user(text,minlen):
+	assert type(text) == str , 'username must be a string' 
+	if minlen<1:
+		raise ValueError('minimum length must be at least 1')
+	if not text.isalnum():
+		raise ValueError('Text is invalid')
+	if len(text)<minlen:
+		return False
+	return True
+```
+
+We've added an assertion that
+verifies that the type of the username variable
+is STR which we know is
+a name that the interpreter uses for strings.
+If the function is called with
+a username parameter that's not a string,
+an error will be raised with the message we provided. 
+
+```python3
+>>> from error_raising import validate_user
+>>> validate_user([],1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/nishit/error_raising.py", line 2, in validate_user
+    assert type(text) == str , 'username must be a string' 
+AssertionError: username must be a string
+>>> 
+```
