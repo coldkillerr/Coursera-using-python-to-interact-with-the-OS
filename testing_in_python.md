@@ -207,6 +207,78 @@ to verify that performance does not degrade.
 Taking together a group of tests of one or
 many kinds is commonly referred to as a `test suite`. 
 
+<h2> Testing for Expected Errors </h2>
+
+With some `edge cases` the expectation is that the function will raise an error and
+we want to be able to test that too.
+Well, we use the `assertRaises` method provided by the `unittest` module. 
+
+```python3
+# code to be tested
+
+def validate_user(text,minlen):
+	assert type(text) == str , 'username must be a string' 
+	if minlen<1:
+		raise ValueError('minimum length must be at least 1')
+	if not text.isalnum():
+		raise ValueError('Text is invalid')
+	if len(text)<minlen:
+		return False
+	return True
+```
+
+```python3
+# test code
+import unittest
+from validations import *
+
+class TestReg(unittest.TestCase):
+	def test_basic(self):
+		testcase_text='Nishit78'
+		testcase_len=7
+		expected= True
+		self.assertEqual(validate_user(testcase_text,testcase_len),expected)
+
+	def test_too_short(self):
+		self.assertEqual(validate_user('Ram878',10),False)
+
+	def test_invalid_minlen(self):
+		self.assertRaises(ValueError,validate_user,'user',-1)
+
+
+
+
+unittest.main()
+```
+
+```shell
+$ python3 validations_test.py 
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+```
+
+We can see that the `assertRaises` method works a little bit differently than
+the `assertEqual` method that we used before.
+In this case,
+we need to first pass the error that we expect the function to raise.
+Then the function name,
+followed by any parameters that need to be passed to that function.
+Behind the scenes, this method is calling the function that we want to test
+using the try except block and
+checking that it does raise the error that we said it would raise. 
+
+
+
+
+
+
+
+
+
+
 <h2> Test Driven Development </h2>
 
 A process called test-driven development or
