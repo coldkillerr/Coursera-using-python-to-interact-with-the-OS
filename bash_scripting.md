@@ -26,4 +26,6 @@
   the dot `.` shortcut reverses the current directory.
   So this command is copying the `qwikUnitTesting.pem`
   file located in the previous directory to this directory.
+ 
+* `touch` command is used to create an empty file
 
