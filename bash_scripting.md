@@ -65,6 +65,8 @@
 * `rm` command is used to remove files from directories.
    If we use `rm *` all files are deleted as the `*` acts as a placeholder for all files in the directory.
    if we want to delete a single file , the syntax for it is `rm filename`.
+   
+   <b> Note : This command works only on empty directories. </b>
 * 
    
 
