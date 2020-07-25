@@ -61,4 +61,6 @@
   file located in the previous directory to this directory.
  
 * `touch` command is used to create an empty file
+* `mv` command is used to rename or move a file .
+
 
