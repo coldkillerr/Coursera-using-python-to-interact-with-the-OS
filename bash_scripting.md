@@ -38,9 +38,9 @@
   The sizes of these directories are
   related to the amount of files in them. 
 
-* `chmod` is a command to change permissions of a file
-* `mkdir` command is used to create a new directory, 
-* `cd` command is used change into new directory, 
+* `chmod` is a command to change permissions of a file.
+* `mkdir` command is used to create a new directory. 
+* `cd` command is used change into new directory.
 * `pwd` is the command used  to print the current working directory. 
 * `cp` command is used tocopy files from one directory to another.
 
@@ -62,5 +62,9 @@
  
 * `touch` command is used to create an empty file
 * `mv` command is used to rename or move a file .
-
+* `rm` command is used to remove files from directories.
+   If we use `rm *` all files are deleted as the `*` acts as a placeholder for all files in the directory.
+   if we want to delete a single file , the syntax for it is `rm filename`.
+* 
+   
 
