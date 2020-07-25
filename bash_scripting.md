@@ -6,5 +6,6 @@
 * `cat` is command for showing contents of files
 * `ls` is the command to list contents of a directory
 * `chmod` is a command to change permissions of a file
-* To create a new directory, we use the `mkdir` command.
-* To change into that directory, we use the `cd` command. 
+* `mkdir` command is used to create a new directory, 
+* `cd` command is used change into new directory, 
+* `pwd` is the command used  to print the current working directory. 
