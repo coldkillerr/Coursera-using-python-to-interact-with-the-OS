@@ -18,3 +18,12 @@
   $ ls
   qwikUnitTesting.pem
   ```
+  
+  The dots `.` are shortcuts that we can
+  use to refer to some special directories.
+  The dot-dot `..` shortcut reverses a parent directory,
+  the previous directory and the absolute path while
+  the dot `.` shortcut reverses the current directory.
+  So this command is copying the `qwikUnitTesting.pem`
+  file located in the previous directory to this directory.
+
