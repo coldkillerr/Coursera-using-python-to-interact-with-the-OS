@@ -67,6 +67,6 @@
    if we want to delete a single file , the syntax for it is `rm filename`.
    
    <b> Note : This command works only on empty directories. </b>
-* 
+
    
 
