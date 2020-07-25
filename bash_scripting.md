@@ -9,3 +9,12 @@
 * `mkdir` command is used to create a new directory, 
 * `cd` command is used change into new directory, 
 * `pwd` is the command used  to print the current working directory. 
+* `cp` command is used tocopy files from one directory to another.
+
+  eg.
+  ```shell
+  $ cp ../qwikUnitTesting.pem .
+
+  $ ls
+  qwikUnitTesting.pem
+  ```
