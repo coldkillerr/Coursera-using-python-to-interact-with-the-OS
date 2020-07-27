@@ -102,5 +102,11 @@ text to be redirected to a file
 text to be redirected to a file
 ```
 
+In a similar way we can also redirect standard input.
+Instead of using the keyboard to send data into a program,
+we can use the less than symbol to read the contents of a file. 
+
+
+
 
 
