@@ -414,3 +414,51 @@ cat spider.txt | tr ' ' '\n' | sort | uniq -c | sort -nr| head
       2 sunshine
       2 snow
 ```
+<h3> Piping in Python </h3>
+
+You can use your Python scripts and pipelines too.
+Python can read from standard input using
+the stdin file object provided by the sys module. 
+
+```sh
+$  cat capitalize.py 
+#!/usr/bin/env python3
+import sys
+for line in sys.stdin:
+	print(line.capitalize())
+```
+
+```
+$  cat spider.txt | ./capitalize.py 
+Incy wincy spider
+
+Climbed up the waterspout
+
+Down came the rain
+
+And washed the spider out
+
+Out came the sunshine
+
+And dried up all the rain
+
+And incy wincy spider
+
+Climbed up the spout again.
+
+Incy wincy spider
+
+Climbed up a tree
+
+Down came the snow
+
+And made poor incy freeze
+
+Out came the sunshine
+
+And melted all the snow
+
+So incy wincy spider
+
+Had another go.
+```
