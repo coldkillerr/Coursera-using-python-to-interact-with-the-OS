@@ -428,7 +428,7 @@ for line in sys.stdin:
 	print(line.capitalize())
 ```
 
-```
+```sh
 $  cat spider.txt | ./capitalize.py 
 Incy wincy spider
 
