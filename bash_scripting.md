@@ -141,7 +141,7 @@ Traceback (most recent call last):
     raise ValueError('Value Error Raised')
 ValueError: Value Error Raised
 ```
-
+We didn't see the `ValueError` on screen because it was written to the file `error_file.txt`
 
 
 
