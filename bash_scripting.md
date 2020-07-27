@@ -202,3 +202,215 @@ We can scroll up or down using the page up,
 page down, or arrow keys.
 Once we're done looking at the files,
 we can quit with `Q` . 
+
+Example 2 :
+
+
+We're first using `cat` to get
+the contents of our spider.txt file.
+
+```sh
+$  cat spider.txt
+
+Incy wincy spider
+Climbed up the waterspout
+Down came the rain
+And washed the spider out
+Out came the sunshine
+And dried up all the rain
+And incy wincy spider
+Climbed up the spout again.
+Incy wincy spider
+Climbed up a tree
+Down came the snow
+And made poor incy freeze
+Out came the sunshine
+And melted all the snow
+So incy wincy spider
+Had another go.
+```
+
+Those contents are then sent to a command called `tr`,
+which gets its name from the word translate.
+It takes the characters in
+the first parameter, in this case,
+it's a space and then transform
+them into a character in the second parameter.
+In this case, it's a newline character `\n`.
+So basically, what we're doing is
+putting each word in its own separate line.
+
+
+Next, we pass results to the sort command through a pipe.
+This command sorts results alphabetically.
+
+```sh
+$  cat spider.txt | tr ' ' '\n' | sort
+
+a
+again.
+all
+all
+And
+And
+And
+And
+And
+another
+came
+came
+came
+came
+Climbed
+Climbed
+Climbed
+Down
+Down
+dried
+freeze
+go.
+Had
+incy
+incy
+incy
+Incy
+Incy
+made
+melted
+out
+Out
+Out
+poor
+rain
+rain
+snow
+snow
+So
+spider
+spider
+spider
+spider
+spider
+spout
+sunshine
+sunshine
+the
+the
+the
+the
+the
+the
+the
+the
+the
+tree
+up
+up
+up
+up
+washed
+waterspout
+wincy
+wincy
+wincy
+wincy
+```
+
+The sorted results are then passed to the `uniq` command,
+which displays each match once,
+and by using a `-c` flag,
+it prefixes each unique line
+with a number of times it occurred.
+
+```sh
+$  cat spider.txt | tr ' ' '\n' | sort | uniq 
+a
+again.
+all
+And
+another
+came
+Climbed
+Down
+dried
+freeze
+go.
+Had
+incy
+Incy
+made
+melted
+out
+Out
+poor
+rain
+snow
+So
+spider
+spout
+sunshine
+the
+tree
+up
+washed
+waterspout
+wincy
+```
+
+This output is passed via pipe to
+the `sort` command once more, this time,
+with the `-nr` flag,
+which sorts results numerically and in reverse order,
+from most to least hits.
+
+```
+cat spider.txt | tr ' ' '\n' | sort | uniq -c | sort -nr
+      9 the
+      5 spider
+      5 And
+      4 wincy
+      4 up
+      4 came
+      3 incy
+      3 Climbed
+      2 sunshine
+      2 snow
+      2 rain
+      2 Out
+      2 Incy
+      2 Down
+      2 all
+      1 waterspout
+      1 washed
+      1 tree
+      1 spout
+      1 So
+      1 poor
+      1 out
+      1 melted
+      1 made
+      1 Had
+      1 go.
+      1 freeze
+      1 dried
+      1 another
+      1 again.
+      1 a
+```
+
+The output is finally passed to the `head` command,
+which prints the first 10 lines to stdl.
+
+```sh
+cat spider.txt | tr ' ' '\n' | sort | uniq -c | sort -nr| head
+      9 the
+      5 spider
+      5 And
+      4 wincy
+      4 up
+      4 came
+      3 incy
+      3 Climbed
+      2 sunshine
+      2 snow
+```
