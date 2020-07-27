@@ -104,7 +104,43 @@ text to be redirected to a file
 
 In a similar way we can also redirect standard input.
 Instead of using the keyboard to send data into a program,
-we can use the less than symbol to read the contents of a file. 
+we can use the less than `<` symbol to read the contents of a file. 
+
+```sh
+$ ./streams_err.py 
+Enter data :
+data to be written
+Printing data to STDOUT : data to be written
+Traceback (most recent call last):
+  File "./streams_err.py", line 5, in <module>
+    raise ValueError('Value Error Raised')
+ValueError: Value Error Raised
+
+$ ./streams_err.py < new_text.txt 
+Enter data :
+Printing data to STDOUT : text to be redirected to a file
+Traceback (most recent call last):
+  File "./streams_err.py", line 5, in <module>
+    raise ValueError('Value Error Raised')
+ValueError: Value Error Raised
+
+$ cat new_text.txt 
+text to be redirected to a file
+text to be redirected to a file
+```
+We can also write the errors from a code to a file using `2f`
+
+```sh
+$ ./streams_err.py < new_text.txt 2> error_file.txt
+Enter data :
+Printing data to STDOUT : text to be redirected to a file
+
+$ cat error_file.txt 
+Traceback (most recent call last):
+  File "./streams_err.py", line 5, in <module>
+    raise ValueError('Value Error Raised')
+ValueError: Value Error Raised
+
 
 
 
