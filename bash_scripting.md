@@ -201,4 +201,4 @@ which displays them one page at a time.
 We can scroll up or down using the page up,
 page down, or arrow keys.
 Once we're done looking at the files,
-we can quit with Q. 
+we can quit with Q . 
