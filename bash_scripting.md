@@ -78,4 +78,20 @@ we use the greater than symbol.
 
 Example:
 
+```shell
+$ cat text.py 
+#!/usr/bin/env python3
+print('text to be redirected to a file')
+
+$ ./text.py 
+text to be redirected to a file
+
+$  ./text.py > new_text.txt
+
+$ cat new_text.txt 
+text to be redirected to a file
+```
+
+
+
 
