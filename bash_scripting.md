@@ -70,7 +70,7 @@
 
 <h2> Redirecting Streams </h2>
    
-Redirection is a process of sending a stream to a different destination. his process is provided to us by the operating system and
+`Redirection` is a process of sending a stream to a different destination. his process is provided to us by the operating system and
 can be really useful when you want to store the output of a command in a file,
 instead of just looking at it on a screen.
 To redirect the standard output of a program to a file
