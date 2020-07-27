@@ -91,7 +91,7 @@ $  ./text.py > new_text.txt
 $ cat new_text.txt 
 text to be redirected to a file
 ```
-
+<b> Note : Each time we perform of redirection of STDOUT, the destination is overwritten. </b> 
 
 
 
