@@ -509,4 +509,55 @@ It's just one of many signals that we can send.
 
 Another keyboard combination that we can use to send a signal is `Ctrl-Z`. 
 
+```sh
+$  ping www.example.com
+PING www.example.com (93.184.216.34) 56(84) bytes of data.
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=1 ttl=57 time=209 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=2 ttl=57 time=211 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=3 ttl=57 time=208 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=4 ttl=57 time=208 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=5 ttl=57 time=210 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=6 ttl=57 time=221 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=7 ttl=57 time=211 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=8 ttl=57 time=210 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=9 ttl=57 time=230 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=10 ttl=57 time=209 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=11 ttl=57 time=209 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=12 ttl=57 time=208 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=13 ttl=57 time=216 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=14 ttl=57 time=208 ms
+^Z
+[1]+  Stopped                 ping www.example.com
+```
+The signal that we sent is called `SIGSTOP`.
+This signal causes the program to stop running without actually terminating.
+But don't worry, we can make it run again by executing `fg` 
+
+```sh
+$ fg
+ping www.example.com
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=15 ttl=57 time=208 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=16 ttl=57 time=210 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=17 ttl=57 time=216 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=18 ttl=57 time=208 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=19 ttl=57 time=209 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=20 ttl=57 time=210 ms
+^C
+--- www.example.com ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 203578ms
+rtt min/avg/max/mdev = 208.388/211.985/230.643/5.374 ms
+```
+To send other signals, we can use the command called `Kill` .
+By default, Kill will send a signal called `SIGTERM` that tells the program to terminate.
+Since Kill is a separate program, we need to run it on a separate terminal.
+And we also need to know the process identifier or
+`PID` of the process that we want to send the signal to.
+To find out the PID that we want to send the signal to,
+we'll use the `ps` command which list the currently running processes.
+Depending on what options that we pass,
+it'll show different subsets of processes with different amounts of detail.
+For this example, we'll call `ps ax`,
+which lists all the running processes in the current computer.
+And then we'll use the `grep` command to only keep lines that contain the name of
+the process that we're looking for.
 
