@@ -468,3 +468,27 @@ Had another go.
 We can also cause it to reload its configuration, or to close all open files.
 Knowing how to send these signals lets us interact with processes and
 have more control over how they behave. 
+
+Example :
+
+```sh
+ping www.example.com
+PING www.example.com (93.184.216.34) 56(84) bytes of data.
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=1 ttl=57 time=270 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=2 ttl=57 time=223 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=3 ttl=57 time=229 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=4 ttl=57 time=218 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=5 ttl=57 time=349 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=6 ttl=57 time=209 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=7 ttl=57 time=219 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=8 ttl=57 time=212 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=9 ttl=57 time=217 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=10 ttl=57 time=214 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=11 ttl=57 time=220 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=12 ttl=57 time=209 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=13 ttl=57 time=209 ms
+^C
+--- www.example.com ping statistics ---
+14 packets transmitted, 13 received, 7% packet loss, time 13017ms
+rtt min/avg/max/mdev = 209.062/231.006/349.040/37.375 ms
+```
