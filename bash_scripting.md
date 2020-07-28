@@ -492,3 +492,21 @@ PING www.example.com (93.184.216.34) 56(84) bytes of data.
 14 packets transmitted, 13 received, 7% packet loss, time 13017ms
 rtt min/avg/max/mdev = 209.062/231.006/349.040/37.375 ms
 ```
+
+The `ping` command is now running,
+sending `ICMP` packets to machine over the network once per second.
+And it will keep running forever unless we interrupt it.
+To do that, we use the `Ctrl-C` combination. 
+When we interrupt it, the program doesn't just end abruptly.
+First it prints a summary of what it did and what the results were.
+It's very polite under these circumstances.
+What's happening behind the scenes is the process received a signal indicating that
+we wanted it to stop.
+When that signal's received, the process does whatever it needs to finish cleanly.
+The signal that control see sense is called `SIGINT`.
+It's just one of many signals that we can send.
+
+
+Another keyboard combination that we can use to send a signal is `Ctrl-Z`. 
+
+
