@@ -462,3 +462,9 @@ So incy wincy spider
 
 Had another go.
 ```
+<h2> Signalling Processes </h2>
+
+`Signals` are tokens delivered to running processes to indicate a desired action. Using signals, we can tell a program that we want it to pause or terminate.
+We can also cause it to reload its configuration, or to close all open files.
+Knowing how to send these signals lets us interact with processes and
+have more control over how they behave. 
