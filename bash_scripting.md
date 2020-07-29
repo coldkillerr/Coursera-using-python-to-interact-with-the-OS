@@ -567,3 +567,34 @@ which lists all the running processes in the current computer.
 And then we'll use the `grep` command to only keep lines that contain the name of
 the process that we're looking for.
 
+
+```sh
+$  ping www.example.com
+PING www.example.com (93.184.216.34) 56(84) bytes of data.
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=1 ttl=57 time=202 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=2 ttl=57 time=202 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=3 ttl=57 time=203 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=4 ttl=57 time=203 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=5 ttl=57 time=212 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=6 ttl=57 time=202 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=7 ttl=57 time=202 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=8 ttl=57 time=205 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=9 ttl=57 time=202 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=10 ttl=57 time=202 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=11 ttl=57 time=205 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=12 ttl=57 time=256 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=13 ttl=57 time=219 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=14 ttl=57 time=202 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=15 ttl=57 time=210 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=16 ttl=57 time=202 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=17 ttl=57 time=274 ms
+Terminated
+```
+
+```sh
+ $  ps ax | grep ping 
+\ 1545 ?        Sl     0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-housekeeping
+28321 pts/0    S+     0:00 ping www.example.com
+28405 pts/1    S+     0:00 grep --color=auto ping
+$ kill 28321
+```
