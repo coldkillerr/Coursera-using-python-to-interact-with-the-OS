@@ -598,3 +598,7 @@ Terminated
 28405 pts/1    S+     0:00 grep --color=auto ping
 $ kill 28321
 ```
+
+We've now sent the `SIGTERM` signal and the process was terminated.
+
+
