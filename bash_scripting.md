@@ -549,13 +549,19 @@ rtt min/avg/max/mdev = 208.388/211.985/230.643/5.374 ms
 ```
 To send other signals, we can use the command called `Kill` .
 By default, Kill will send a signal called `SIGTERM` that tells the program to terminate.
+
+
 Since Kill is a separate program, we need to run it on a separate terminal.
 And we also need to know the process identifier or
 `PID` of the process that we want to send the signal to.
+
+
 To find out the PID that we want to send the signal to,
 we'll use the `ps` command which list the currently running processes.
 Depending on what options that we pass,
 it'll show different subsets of processes with different amounts of detail.
+
+
 For this example, we'll call `ps ax`,
 which lists all the running processes in the current computer.
 And then we'll use the `grep` command to only keep lines that contain the name of
