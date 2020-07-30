@@ -675,3 +675,13 @@ hello
 There can be `no spaces` between the name
 of the variable and the equal sign,
 or between the equal sign and the value. 
+
+<h2> Globs </h2>
+
+`Globs` are characters that allow
+us to create `list of files`.
+The star `*` and question mark `?` are the most common globs.
+Using these globs lets us create sequences of
+filenames that we can use as
+parameters to the commands we call in our scripts.
+
