@@ -685,3 +685,19 @@ Using these globs lets us create sequences of
 filenames that we can use as
 parameters to the commands we call in our scripts.
 
+```sh
+$  echo *sh
+bash_1.sh encrypt.sh install.sh passwordGen.sh
+```
+
+```sh
+echo p*
+passwordGen.sh password.txt password.txt.save
+```
+
+```sh
+$ echo ??????.sh
+bash_1.sh
+```
+The `*` is used to replace a series of characters whereas `?` replaces a single character.
+
