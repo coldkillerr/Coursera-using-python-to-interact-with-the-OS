@@ -601,4 +601,6 @@ $ kill 28321
 
 We've now sent the `SIGTERM` signal and the process was terminated.
 
+<h2> Bash scripting </h2>
+
 
