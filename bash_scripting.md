@@ -603,4 +603,45 @@ We've now sent the `SIGTERM` signal and the process was terminated.
 
 <h2> Bash scripting </h2>
 
+We can use `Bash` to write simple scripts when we need to use a lot of commands.
 
+Example :
+
+```sh
+#!/bin/bash
+
+echo "Starting at : $(date)"
+echo
+
+echo "UPTIME"
+uptime 
+echo
+
+echo "FREE"
+free 
+echo
+
+echo "WHO"
+who 
+echo
+
+echo "Finishing at $(date)"
+```
+
+```sh
+$  ./bash_1.sh 
+Starting at : Thu Jul 30 11:02:25 IST 2020
+
+UPTIME
+ 11:02:25 up 12:52,  1 user,  load average: 2.81, 3.01, 3.10
+
+FREE
+              total        used        free      shared  buff/cache   available
+Mem:        3931304     2292156      227824      418704     1411324      972480
+Swap:       2097148       96500     2000648
+
+WHO
+nishit   tty7         2020-07-29 22:09 (:0)
+
+Finishing at Thu Jul 30 11:02:25 IST 2020
+```
