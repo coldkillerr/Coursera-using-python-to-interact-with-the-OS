@@ -700,4 +700,6 @@ $ echo ??????.sh
 bash_1.sh
 ```
 The `*` is used to replace a series of characters whereas `?` replaces a single character.
+We can use this functionality in python using the `glob` module.
+
 
