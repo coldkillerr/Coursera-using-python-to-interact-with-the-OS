@@ -672,3 +672,6 @@ $ example=hello
 $ echo $example
 hello
 ```
+There can be `no spaces` between the name
+of the variable and the equal sign,
+or between the equal sign and the value. 
