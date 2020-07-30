@@ -645,3 +645,30 @@ nishit   tty7         2020-07-29 22:09 (:0)
 
 Finishing at Thu Jul 30 11:02:25 IST 2020
 ```
+<h2> Variables </h2>
+
+Bash lets us use
+variables to store and retrieve values.
+
+`Environment variables` are variables that are set in
+the environment in which the command is executing.
+We mentioned that we set
+these variables using the equals `=` sign.
+When we want to access the value of a variable in bash,
+we need to prefix the name of
+the variable with the dollar `$` sign.
+
+
+On top of the predefined environment variables,
+we can also define our own variables for our scripts.
+To do that we just assign a value
+to the name of the variable that we want to define. 
+
+eg.
+
+```sh
+$ example=hello
+
+$ echo $example
+hello
+```
