@@ -702,4 +702,6 @@ bash_1.sh
 The `*` is used to replace a series of characters whereas `?` replaces a single character.
 We can use this functionality in python using the `glob` module.
 
+<h2> Conditional Execution in Bash </h2>
+
 
