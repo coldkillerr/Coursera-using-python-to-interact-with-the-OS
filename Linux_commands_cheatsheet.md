@@ -63,5 +63,5 @@ These are some commands that are useful to know in Linux when interacting with p
 * `fg`: causes a job that was stopped or in the background to return to the foreground
 * `bg`: causes a job that was stopped to go to the background
 * `jobs`: lists the jobs currently running or stopped
-* `top`: shows the processes currently using the most CPU time (press "q" to quit)
+* `top`: shows the processes currently using the most CPU time (press "q" to quit).
 
