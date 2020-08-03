@@ -746,3 +746,20 @@ And finally, our conditional block finishes using the `fi` keyword.
 Test is a command that evaluates the conditions received and
 exits with zero when they are true and with one when they're false. 
 
+```sh
+$ if test -n "$PATH"; then echo "Your path is there" ; fi
+Your path is there
+```
+
+We're using the `-n` option for the test command,
+which checks if a string variable is empty or not.
+
+There's another way of writing it :
+
+```sh
+$ if [ -n "$PATH" ]; then echo "Your path is there" ; fi
+Your path is there
+```
+
+
+
