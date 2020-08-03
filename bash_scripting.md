@@ -706,6 +706,35 @@ We can use this functionality in python using the `glob` module.
 
 In bash scripting, the condition used is based on the exit status of commands.
 We check the exit status for
-command using the dollar sign question mark. 
+command using the dollar sign question mark.
+This logic is used by the if operator in bash.
+To create a conditional expression, we're going to call a command and if the exit
+status of that command is zero, then the condition will be considered true. 
+
+Eg.
+
+```sh
+
+#!/bin/bash
+
+if  grep "127.0.0.1" /etc/hosts ; then
+	echo "all good"
+else
+	echo "ERROR ! 127.0.0.1 is not in hosts"
+fi
+```
+
+```sh
+$ ./check_localhost.sh 
+127.0.0.1	localhost
+all good
+```
 
 
+We start with the `if` keyword followed by the `grep` command that we'll use to
+check for success.
+At the end of the command, we have a semicolon `:` followed by the word `then`.
+After that comes the body of the `conditional`.
+We're using `indentation` like in Python.
+We also have an `else` block for when the command doesn't finish successfully.
+And finally, our conditional block finishes using the `fi` keyword. 
