@@ -761,5 +761,11 @@ $ if [ -n "$PATH" ]; then echo "Your path is there" ; fi
 Your path is there
 ```
 
+In this case, the command we're calling is the opening square bracket `[`.
+This is an alias to the `test` command, but to call it successfully,
+we also need to include a closing square bracket `]`.
+When using this syntax, remember,
+that there needs to be a space before the closing bracket. 
+
 
 
