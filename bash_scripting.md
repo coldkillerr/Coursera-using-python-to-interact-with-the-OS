@@ -704,6 +704,8 @@ We can use this functionality in python using the `glob` module.
 
 <h2> Conditional Execution in Bash </h2>
 
+<h3> If statement </h3>
+
 In bash scripting, the condition used is based on the exit status of commands.
 We check the exit status for
 command using the dollar sign question mark.
@@ -738,3 +740,9 @@ After that comes the body of the `conditional`.
 We're using `indentation` like in Python.
 We also have an `else` block for when the command doesn't finish successfully.
 And finally, our conditional block finishes using the `fi` keyword. 
+
+<h3> Test Statement </h3>
+
+Test is a command that evaluates the conditions received and
+exits with zero when they are true and with one when they're false. 
+
