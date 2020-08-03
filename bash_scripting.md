@@ -704,4 +704,8 @@ We can use this functionality in python using the `glob` module.
 
 <h2> Conditional Execution in Bash </h2>
 
+In bash scripting, the condition used is based on the exit status of commands.
+We check the exit status for
+command using the dollar sign question mark. 
+
 
