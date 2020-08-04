@@ -866,7 +866,41 @@ I like mango
 I like grapes
 I like berries
 ```
+Your web content is stored in a bunch of
+files that all end in  `htm`,
+and the new software requires that they all end
+in `html`.
+You can manually rename them one by
+one using the `mv` command,
+but that could get really old really fast.
+You'd likely end up making mistakes
+after the first few commands.
+Instead, you could do
+the same thing with short Bash script.
 
+```sh
+#!/bin/bash
+
+ 
+for file in *.htm ; do
+	new_file=$(basename "$file" .htm)
+	echo "$new_file"
+	mv $file "/home/nishit/html/$new_file.html" 
+done;
+```
+```sh
+/htm$ ./file_transfer.sh 
+index1
+index2
+index3
+index4
+index5
+index6
+
+~/html$ ls
+index1.html  index2.html  index3.html  index4.html  index5.html  index6.html
+
+```
 
 
 
