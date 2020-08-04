@@ -767,5 +767,53 @@ we also need to include a closing square bracket `]`.
 When using this syntax, remember,
 that there needs to be a space before the closing bracket. 
 
+<h3> While Loop </h3>
+
+Shell code:
+
+```sh
+#!/bin/bash
+#retry_while.sh
+
+n=0
+commmand= $1
+while ! $command && [$n -le 5]; do
+	sleep $n
+	((n=n+1))
+	echo'retry #$n'
+done
+```
+Python code :
+
+```python
+#while_command.py
+#!/usr/bin/env python3
+
+
+import sys
+import random
+
+value=random.randint(0,3)
+print('Returning: {} '.format(str(value)))
+sys.exit(value)
+```
+```sh
+:~$ ./retry_while.sh ./while_command.py 
+Returning: 1 
+:~$ ./retry_while.sh ./while_command.py 
+Returning: 0 
+:~$ ./retry_while.sh ./while_command.py 
+Returning: 2 
+:~$ ./retry_while.sh ./while_command.py 
+Returning: 1 
+:~$ ./retry_while.sh ./while_command.py 
+Returning: 0 
+:~$ ./retry_while.sh ./while_command.py 
+Returning: 3 
+:~$ ./retry_while.sh ./while_command.py 
+Returning: 3 
+:~$ ./retry_while.sh ./while_command.py 
+```
+
 
 
