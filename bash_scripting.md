@@ -835,5 +835,10 @@ Returning: 0
 
 ```
 
+We can see how our script keeps
+executing until the command that we passed
+returns `zero` which is
+exactly what we wanted.
+
 
 
