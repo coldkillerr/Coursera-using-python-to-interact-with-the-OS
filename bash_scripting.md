@@ -773,16 +773,31 @@ Shell code:
 
 ```sh
 #!/bin/bash
-#retry_while.sh
 
 n=0
-commmand= $1
-while ! $command && [$n -le 5]; do
+command=$1
+while ! $command && [ $n -le 5 ]; do
 	sleep $n
 	((n=n+1))
-	echo'retry #$n'
-done
+	echo " retry #$n "
+done;
 ```
+
+In this script, we're using
+the variable `n` to print messages,
+counting from one to five.
+The condition for the `while` loop uses
+the same format as a condition for an `if` block.
+In this example, we check if the variable `n` is less
+than or equal to five using the `-le` operator.
+The loop itself starts with the `do`
+keyword and finishes with a `done` keyword.
+To increment the value of the variable `n`
+we're using a bash construct of
+double parentheses `(( ))` that lets us do
+arithmetic operations with our variables. 
+
+
 Python code :
 
 ```python
@@ -797,22 +812,27 @@ value=random.randint(0,3)
 print('Returning: {} '.format(str(value)))
 sys.exit(value)
 ```
+To simulate a command that sometimes
+succeeds or sometimes fails,
+we have a small Python script that will return
+an exit value picked at
+random by a range that we give it.
+It uses `random.randint`
+to generate a value between zero and three,
+then it prints the selected value and exits with it.
+
 ```sh
-:~$ ./retry_while.sh ./while_command.py 
+$ ./retry_while.sh ./while_command.py 
 Returning: 1 
-:~$ ./retry_while.sh ./while_command.py 
-Returning: 0 
-:~$ ./retry_while.sh ./while_command.py 
+ retry #1 
 Returning: 2 
-:~$ ./retry_while.sh ./while_command.py 
+ retry #2 
 Returning: 1 
-:~$ ./retry_while.sh ./while_command.py 
+ retry #3 
+Returning: 2 
+ retry #4 
 Returning: 0 
-:~$ ./retry_while.sh ./while_command.py 
-Returning: 3 
-:~$ ./retry_while.sh ./while_command.py 
-Returning: 3 
-:~$ ./retry_while.sh ./while_command.py 
+
 ```
 
 
