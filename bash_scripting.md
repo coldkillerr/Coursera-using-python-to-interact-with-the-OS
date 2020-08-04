@@ -840,5 +840,31 @@ executing until the command that we passed
 returns `zero` which is
 exactly what we wanted.
 
+<h3> For Loop </h3>
+
+Both in `Python` and `Bash`,
+for loops are used to
+iterate over a sequence of elements.
+In Python, the sequences are
+data structures like a list or a tuple or a string.
+In Bash, we construct these sequences
+just by listing the elements with spaces in between. 
+
+```sh
+#!/bin/bash
+
+for fruit in apple mango grapes berries; do
+	echo "I like $fruit"
+
+done;
+```
+
+```sh
+$ ./fruit.sh 
+I like apple
+I like mango
+I like grapes
+I like berries
+```
 
 
